@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.veezco/veezco",
+  "title": "Veezco",
+  "description": "Find local businesses to sell to, with contacts, website checks and an opening line for the call.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.veezco.com/en",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.veezco.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your Veezco API key (Dashboard, Integrations, API keys)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
